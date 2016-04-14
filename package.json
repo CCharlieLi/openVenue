@@ -1,0 +1,19 @@
+{
+  "name": "openvenue",
+  "version": "0.0.1",
+  "description": "A platform to publish and reserve venue for events",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/CCharlieLi/openVenue.git"
+  },
+  "author": "CCharlieLi",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/CCharlieLi/openVenue/issues"
+  },
+  "homepage": "https://github.com/CCharlieLi/openVenue"
+}
