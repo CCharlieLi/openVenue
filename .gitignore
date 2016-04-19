@@ -1,6 +1,4 @@
 
-# Created by https://www.gitignore.io/api/osx,node,sublimetext
-
 ### OSX ###
 .DS_Store
 .AppleDouble
@@ -27,6 +25,24 @@ Icon
 Network Trash Folder
 Temporary Items
 .apdisk
+
+
+### SublimeText ###
+# cache files for sublime text
+*.tmlanguage.cache
+*.tmPreferences.cache
+*.stTheme.cache
+
+# workspace files are user-specific
+*.sublime-workspace
+
+# project files should be checked into the repository, unless a significant
+# proportion of contributors will probably not be using SublimeText
+# *.sublime-project
+*.sublime-*
+
+# sftp configuration file
+sftp-config.json
 
 
 ### Node ###
@@ -65,20 +81,14 @@ jspm_packages
 # Optional REPL history
 .node_repl_history
 
-
-### SublimeText ###
-# cache files for sublime text
-*.tmlanguage.cache
-*.tmPreferences.cache
-*.stTheme.cache
-
-# workspace files are user-specific
-*.sublime-workspace
-
-# project files should be checked into the repository, unless a significant
-# proportion of contributors will probably not be using SublimeText
-# *.sublime-project
-
-# sftp configuration file
-sftp-config.json
-
+*.csv
+*.dat
+*.iml
+*.out
+*.swo
+*.swp
+*.tgz
+*.xml
+.idea
+.project
+.strong-pm
