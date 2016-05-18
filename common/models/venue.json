@@ -1,0 +1,61 @@
+{
+  "name": "Venue",
+  "plural": "Venues",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "Name": {
+      "type": "string",
+      "required": true,
+      "default": ""
+    },
+    "District": {
+      "type": "string",
+      "required": true,
+      "default": ""
+    },
+    "Address": {
+      "type": "string",
+      "required": true,
+      "default": ""
+    },
+    "Capacity": {
+      "type": "number",
+      "required": true,
+      "default": ""
+    },
+    "Food": {
+      "type": "boolean",
+      "default": false
+    },
+    "AudioAndVideo": {
+      "type": "boolean",
+      "default": false
+    },
+    "Owner": {
+      "type": "string",
+      "required": true,
+      "default": ""
+    },
+    "Email": {
+      "type": "string",
+      "required": true,
+      "default": ""
+    },
+    "Tel": {
+      "type": "string",
+      "default": ""
+    },
+    "Other": {
+      "type": "string",
+      "default": ""
+    }
+  },
+  "validations": [],
+  "relations": {},
+  "acls": [],
+  "methods": {}
+}

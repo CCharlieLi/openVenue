@@ -13,23 +13,12 @@
       "./mixins"
     ]
   },
-  "User": {
-    "dataSource": "db"
+  "Venue": {
+    "dataSource": "redisDs",
+    "public": true
   },
-  "AccessToken": {
-    "dataSource": "db",
-    "public": false
-  },
-  "ACL": {
-    "dataSource": "db",
-    "public": false
-  },
-  "RoleMapping": {
-    "dataSource": "db",
-    "public": false
-  },
-  "Role": {
-    "dataSource": "db",
-    "public": false
+  "Person": {
+    "dataSource": "redisDs",
+    "public": true
   }
 }

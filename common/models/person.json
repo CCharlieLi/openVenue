@@ -1,0 +1,30 @@
+{
+  "name": "Person",
+  "plural": "People",
+  "base": "PersistedModel",
+  "idInjection": false,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "Username": {
+      "type": "string",
+      "required": true,
+      "default": ""
+    },
+    "Password": {
+      "type": "string",
+      "required": true,
+      "default": ""
+    },
+    "Wechat": {
+      "type": "string",
+      "required": true,
+      "default": ""
+    }
+  },
+  "validations": [],
+  "relations": {},
+  "acls": [],
+  "methods": {}
+}
