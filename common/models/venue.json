@@ -2,55 +2,34 @@
   "name": "Venue",
   "plural": "Venues",
   "base": "PersistedModel",
-  "idInjection": true,
+  "idInjection": false,
   "options": {
     "validateUpsert": true
   },
   "properties": {
-    "Name": {
+    "Username": {
       "type": "string",
       "required": true,
       "default": ""
     },
-    "District": {
+    "Password": {
       "type": "string",
       "required": true,
       "default": ""
     },
-    "Address": {
+    "Wechat": {
       "type": "string",
       "required": true,
       "default": ""
     },
-    "Capacity": {
-      "type": "number",
-      "required": true,
-      "default": ""
-    },
-    "Food": {
-      "type": "boolean",
-      "default": false
-    },
-    "AudioAndVideo": {
-      "type": "boolean",
-      "default": false
-    },
-    "Owner": {
+    "VenueName": {
       "type": "string",
       "required": true,
-      "default": ""
-    },
-    "Email": {
-      "type": "string",
-      "required": true,
-      "default": ""
-    },
-    "Tel": {
-      "type": "string",
       "default": ""
     },
     "Other": {
       "type": "string",
+      "required": true,
       "default": ""
     }
   },
