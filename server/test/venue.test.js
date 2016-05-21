@@ -9,11 +9,16 @@ const request = require('supertest')(app);
 const Person = app.models.Person;
 const data = JSON.stringify({
   data: {
+    geoHash: '123456a',
     username: 'Charlie',
     password: '123456',
     wechat: '449217425',
     venueName: 'qwwe',
-    other: '123'
+    other: '123',
+    coordinate: {
+      lng: 120,
+      lat: 31
+    }
   }
 });
 const brokenData = JSON.stringify({
@@ -25,8 +30,8 @@ const brokenData = JSON.stringify({
   }
 });
 
-describe('Person API', () => {
-  describe('POST /addvenue', () => {
+describe('Venue API', () => {
+  describe('Add Venue', () => {
     it('should return 200 when sign up data', function (done) {
       request.post('/venues/addvenue')
         .type('application/json')
@@ -70,7 +75,35 @@ describe('Person API', () => {
     });
   });
 
-  describe('DELETE /delete', () => {
+  describe('Find Venue', () => {
+    it('should return 200 when find a saved venue', function (done) {
+      request.post('/venues/findvenue')
+        .type('application/json')
+        .send(JSON.stringify({
+          data: {
+            geoHash: '123456a'
+          }
+        }))
+        .expect(200)
+        .end((err, res) => {
+          let data = res.body.data;
+          data.username.should.be.equal('Charlie');
+          done(err);
+        });
+    });
+
+    it('should return 200 when find all saved venue', function (done) {
+      request.get('/venues/findallvenues')
+        .expect(200)
+        .end((err, res) => {
+          let data = res.body.data;
+          data.should.be.Array;
+          done(err);
+        });
+    });
+  });
+
+  describe('DELETE Venue', () => {
     it('should return 200 when delete venue', function (done) {
       request.post('/venues/deletevenue')
         .type('application/json')
@@ -78,6 +111,7 @@ describe('Person API', () => {
         // .set('Authorization', 'Token token=blahblahblah')
         .send(JSON.stringify({
           data: {
+            geoHash: '123456a',
             venueName: 'qwwe',
             password: '123456'
           }
