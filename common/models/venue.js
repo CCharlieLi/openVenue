@@ -11,7 +11,7 @@ module.exports = (Venue) => {
        !data.other || !data.coordinate || !data.geoHash) {
         reject(httpError(400, 'sign with missing data.'));
       }
-      Venue.create({
+    	Venue.updateOrCreate({
         id: data.geoHash,
         Username: data.username,
         Password: data.password,  // TODO: Password encryption
@@ -35,7 +35,6 @@ module.exports = (Venue) => {
     }
     return new Promise((resolve, reject) => {
       Venue.findById(data.geoHash).then(function (res) {
-	    	console.log(res);
         if (res) {
           resolve({
             username: res.Username,
@@ -70,11 +69,14 @@ module.exports = (Venue) => {
   };
 
   Venue.deleteVenue = (data) => {
+  	if (!data.password || !data.geoHash) {
+      reject(httpError(400, 'sign with missing data.'));
+    }
     return new Promise((resolve, reject) => {
       Venue.findById(data.geoHash).then(function (res) {
         if (res.Password === data.password.toString()) {
-          Venue.destroyById(data.geoHash).then(function (res) {
-            if (res.count === 1) {
+          Venue.destroyById(data.geoHash).then(function (re) {
+            if (re.count === 1) {
               resolve(httpError(200, 'Venue deleted.'));
             }
           });
