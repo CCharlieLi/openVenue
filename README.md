@@ -1,5 +1,5 @@
 # OpenVenue Backend Application
-
+__OpenVenue__: A Map based application to help renting a house, built with Mapbox, Vue.js and loopback as backend server. http://openvenues.charlieli.cn/ 
 [![Build Status](https://travis-ci.org/CCharlieLi/openVenue-backend.svg?branch=master)](https://travis-ci.org/CCharlieLi/openVenue-backend)
 [![Coverage Status](https://coveralls.io/repos/github/CCharlieLi/openVenue-backend/badge.svg?branch=master)](https://coveralls.io/github/CCharlieLi/openVenue-backend?branch=master)
 
