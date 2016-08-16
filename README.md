@@ -1,7 +1,7 @@
 # OpenVenue Backend Application
 
 [![Build Status](https://travis-ci.org/CCharlieLi/openVenue-backend.svg?branch=master)](https://travis-ci.org/CCharlieLi/openVenue-backend)
-
+[![Coverage Status](https://coveralls.io/repos/github/CCharlieLi/openVenue-backend/badge.svg?branch=master)](https://coveralls.io/github/CCharlieLi/openVenue-backend?branch=master)
 
 # Test
 
