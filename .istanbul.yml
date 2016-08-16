@@ -1,0 +1,7 @@
+instrumentation:
+    excludes: ['server/server.js']
+check:
+    global:
+        lines: 80
+        functions: 80
+        branchs: 80
