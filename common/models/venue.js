@@ -11,6 +11,7 @@ module.exports = (Venue) => {
       return Promise.reject(httpError(400, 'sign with missing data.'));
     }
     return Venue.findById(data.geoHash).then(function (res) {
+
       if (res === null || res.Password === data.password.toString()) {
         return Venue.updateOrCreate({
           id: data.geoHash,
@@ -21,7 +22,8 @@ module.exports = (Venue) => {
           Other: data.other,
           Coordinate: data.coordinate
         }).then((res) => {
-          return { id_token: utils.createToken(data.password) };
+          res.Password = '';
+          return Object.assign(res, { id_token: utils.createToken(data.password) });
         }, (err) => {
           return err;
         });

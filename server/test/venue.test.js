@@ -56,6 +56,10 @@ describe('Venue API', () => {
         .expect(200)
         .end((err, res) => {
           let data = res.body.data;
+          data.Password.should.be.equal('');
+          data.should.have.ownProperty('id');
+          data.should.have.ownProperty('Username');
+          data.should.have.ownProperty('VenueName');
           data.should.have.ownProperty('id_token');
           done(err);
         });
@@ -68,6 +72,10 @@ describe('Venue API', () => {
         .expect(200)
         .end((err, res) => {
           let data = res.body.data;
+          data.Password.should.be.equal('');
+          data.should.have.ownProperty('id');
+          data.should.have.ownProperty('Username');
+          data.should.have.ownProperty('VenueName');
           data.should.have.ownProperty('id_token');
           done(err);
         });
