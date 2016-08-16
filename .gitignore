@@ -92,3 +92,4 @@ jspm_packages
 .idea
 .project
 .strong-pm
+dump.rdb
