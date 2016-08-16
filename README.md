@@ -1,5 +1,8 @@
 # OpenVenue Backend Application
 
+[![Build Status](https://travis-ci.org/CCharlieLi/openVenue-backend.svg?branch=master)](https://travis-ci.org/CCharlieLi/openVenue-backend)
+
+
 # Test
 
 1. `npm i`
@@ -18,4 +21,3 @@ MIT
  files    : 29
  authors  : 
     10	CCharlieLi  100.0%
-    

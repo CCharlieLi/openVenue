@@ -2,6 +2,6 @@ instrumentation:
     excludes: ['server/server.js']
 check:
     global:
-        lines: 80
-        functions: 80
-        branchs: 80
+        lines: 70
+        functions: 70
+        branchs: 70
