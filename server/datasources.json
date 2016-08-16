@@ -1,6 +1,8 @@
 {
-  "db": {
-    "name": "db",
-    "connector": "memory"
+  "redisDs": {
+    "name": "redisDs",
+    "connector": "ioredis",
+    "host": "localhost",
+    "port": 6379
   }
 }
